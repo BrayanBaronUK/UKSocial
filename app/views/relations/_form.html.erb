@@ -1,0 +1,52 @@
+<%= form_with(model: relation, local: true) do |form| %>
+  <% if relation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(relation.errors.count, "error") %> prohibited this relation from being saved:</h2>
+
+      <ul>
+      <% relation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_invited %>
+    <%= form.number_field :user_invited %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible_name %>
+    <%= form.check_box :visible_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible_last_name %>
+    <%= form.check_box :visible_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible_born_date %>
+    <%= form.check_box :visible_born_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible_phone %>
+    <%= form.check_box :visible_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visible_email %>
+    <%= form.check_box :visible_email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @relation.user %>
+</p>
+
+<p>
+  <strong>User invited:</strong>
+  <%= @relation.user_invited %>
+</p>
+
+<p>
+  <strong>Visible name:</strong>
+  <%= @relation.visible_name %>
+</p>
+
+<p>
+  <strong>Visible last name:</strong>
+  <%= @relation.visible_last_name %>
+</p>
+
+<p>
+  <strong>Visible born date:</strong>
+  <%= @relation.visible_born_date %>
+</p>
+
+<p>
+  <strong>Visible phone:</strong>
+  <%= @relation.visible_phone %>
+</p>
+
+<p>
+  <strong>Visible email:</strong>
+  <%= @relation.visible_email %>
+</p>
+
+<%= link_to 'Edit', edit_relation_path(@relation) %> |
+<%= link_to 'Back', relations_path %>
